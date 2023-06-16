@@ -1,11 +1,11 @@
-// Esterno
+// Case
 difference() {
     cube([110, 64, 17]);
     #translate([0, 2])cube([110, 60, 15]);
 }
 
 
-// Retro
+// Back
 difference(){
     difference(){
         #translate([90, 0])cube([20, 64, 17]);
@@ -15,7 +15,7 @@ difference(){
 }
 
 
-// Fronte
+// Front
 difference(){
     difference(){
         #translate([0, 0])cube([20, 64, 17]);
@@ -25,6 +25,45 @@ difference(){
 }
 
 
-// I need a 110x60x15 EFFECTIVE.
-// 0-2, (2-3)buco, 3-6 sul retro. Altezza 3mm
-// 0-3, (3-5.5)buco, 5.5-6 fronte. Altezza 10mm 
+// This is for holding the cable, so that I don't have to disconnect the USB every time. The cable diameter is 3.45mm
+ThreadThick = 0.25;
+ThreadWidth = 0.40;
+HoleWindage = 0.2;			// extra clearance
+Protrusion = 0.1;			// make holes end cleanly
+
+function IntegerMultiple(Size,Unit) = Unit * ceil(Size / Unit);
+
+CableOD = 3.5;                              // cable jacket
+
+Base = [4*CableOD,4*CableOD,3*ThreadThick];	  // overall base and slab thickness
+CornerRadius = CableOD/2;                   // radius of square corners
+CornerSides = 4*4;                          // total sides on square corner cylinders
+NumSides = 6*3;                             // total sides for cylindrical base
+
+module CableClip() {
+    intersection() {
+        resize(Base + [0,0,2*(Base[2] + CableOD)])
+        sphere(d=Base[0],$fn=NumSides);
+
+        union() {
+            translate([0,0,Base[2]/2])
+            cube(Base,center=true);
+
+            for (j=[-1,1]) {
+                translate([0,j*(Base[1]/2 - 0.125*(Base[1] - CableOD)/2),(Base[2] - Protrusion)])
+                    resize([Base[0]/0.75,0,0])
+                        cylinder(d1=0.75*(Base[1]-CableOD),
+                        d2=(Base[1]-CableOD)/cos(0*180/NumSides),
+                        h=(CableOD + Protrusion),
+                        center=false,$fn=NumSides);
+            }
+        }
+    }
+
+//    color("Green",0.2)
+//    translate([0,0,Base[2] + CableOD/2])
+//    rotate([0,90,0])
+//    cylinder(d=CableOD,h=2*Base[0],center=true,$fn=48);
+}
+
+#translate([30, 64, 8])rotate([270, 0, 0])CableClip();
