@@ -1,27 +1,29 @@
+// Revision 1.1 (2023-Aug-30)
+
 // Case
 difference() {
-    cube([110, 64, 17]);
-    #translate([0, 2])cube([110, 60, 15]);
+    cube([90, 54, 17]);
+    #translate([0, 2])cube([90, 50, 15]);
 }
 
 
 // Back
 difference(){
     difference(){
-        #translate([90, 0])cube([20, 64, 17]);
-        #translate([90, 2])cube([18, 60, 15]);
+        #translate([70, 0])cube([20, 54, 17]);
+        #translate([70, 2])cube([18, 50, 15]);
     }
-    #translate([108, 20])cube([2, 10, 3]);
+    #translate([88, 20])cube([2, 10, 3]);
 }
 
 
 // Front
 difference(){
     difference(){
-        #translate([0, 0])cube([20, 64, 17]);
-        #translate([2, 2])cube([18, 60, 15]);
+        #translate([0, 0])cube([20, 54, 17]);
+        #translate([2, 2])cube([18, 50, 15]);
     }
-    #translate([0, 30])cube([2, 25, 10]);
+    #translate([0, 20])cube([2, 25, 10]);
 }
 
 
@@ -66,4 +68,4 @@ module CableClip() {
 //    cylinder(d=CableOD,h=2*Base[0],center=true,$fn=48);
 }
 
-#translate([30, 64, 8])rotate([270, 0, 0])CableClip();
+#translate([30, 54, 8])rotate([270, 0, 0])CableClip();

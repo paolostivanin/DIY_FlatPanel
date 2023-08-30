@@ -1,9 +1,11 @@
+// Revision 1.1 (2023-Aug-30)
+
 // The panel is 359mm x 269mm. There is a black frame of 20mm, so we can reduce the cover size.
 panel_width = 340;
 panel_depth = 240;
 
-// The panel is 2mm high, the foot are 4mm hight. Total height 6mm.
-panel_height = 2;
+// The panel is 3mm high, the foot are 4mm hight. Total height 7mm.
+panel_height = 3;
 scope_diameter = 95;
 foot_height = 4;
 foot_width = 5;
