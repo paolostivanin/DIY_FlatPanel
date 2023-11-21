@@ -17,7 +17,7 @@ Thanks to:
 ## Flat Panels
 * ‎NXDRS A4 (https://www.amazon.it/gp/product/B07GPRGKPY)
   - bought on Sep 2020, died on Nov 2023
-  - panel uniformity ~1.6% (tested using John Upton's method)
+  - panel uniformity ~1.6% (tested using [John Upton's method](https://github.com/paolostivanin/DIY_FlatPanel/blob/main/docs/test_flat_panel.md))
 * HSK A4 (https://www.amazon.it/gp/product/B0BC8MSPJ9/)
   - bought on Nov 2023
   - panel uniformity _> to be tested <_
