@@ -5,7 +5,7 @@ Thanks to:
 * https://github.com/red-man/Alnitak-Lightbox-Clone/
 * https://gist.github.com/ednisley/52b8a6303fa130fe38858488b978874b
 
-# Revision
+## Revision
 * 1.0: initial revision
 * 1.1:
   - panel height increased by 1mm (from 2mm to 3mm)
