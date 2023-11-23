@@ -11,13 +11,10 @@ Thanks to:
   - panel height increased by 1mm (from 2mm to 3mm)
   - arducover made smaller by better rearranging stuff
 
-## Future improvements
-* shorten the DC cables
-
 ## Flat Panels
 * ‎NXDRS A4 (https://www.amazon.it/gp/product/B07GPRGKPY)
   - bought on Sep 2020, died on Nov 2023
   - panel uniformity ~1.6% (tested using [John Upton's method](https://github.com/paolostivanin/DIY_FlatPanel/blob/main/docs/test_flat_panel.md))
 * Omasi A4 (https://www.amazon.it/gp/product/B089LPMDDS)
   - bought on Nov 2023
-  - panel uniformity _> to be tested <_
+  - panel uniformity 0.59% (tested using [John Upton's method](https://github.com/paolostivanin/DIY_FlatPanel/blob/main/docs/test_flat_panel.md))
